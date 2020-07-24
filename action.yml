@@ -4,6 +4,7 @@ description: "Run multiple run steps"
 runs:
   using: "composite"
   steps: 
-    - run: printenv
+    - run: chmod +x ${{env.GITHUB_ACTION_PATH}}/script.sh
+    - run: chmod +x ${{env.GITHUB_ACTION_PATH}}/test/script2.sh
     - run: ${{env.GITHUB_ACTION_PATH}}/script.sh
     - run: ${{env.GITHUB_ACTION_PATH}}/test/script2.sh
