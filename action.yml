@@ -5,5 +5,5 @@ runs:
   using: "composite"
   steps: 
     - run: printenv
-    - run: ./script.sh
-    - run: ./test/script2.sh
+    - run: .${{env.GITHUB_ACTION_PATH}}/script.sh
+    - run: .${{env.GITHUB_ACTION_PATH}}/test/script2.sh
