@@ -1,0 +1,9 @@
+name: "Composite Action Test"
+description: "Run multiple run steps"
+
+runs:
+  using: "composite"
+  steps: 
+    - uses: actions/checkout@v2
+    - run: ./script.sh
+    - run: ./test/script2.sh
