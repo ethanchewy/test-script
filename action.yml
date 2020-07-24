@@ -5,7 +5,9 @@ runs:
   using: "composite"
   steps: 
     - run: printenv
-    - run: echo ${{ toJson(github) }}
+    - run: echo "$GITHUB_CONTEXT"
+      env:
+          GITHUB_CONTEXT: ${{ toJson(github) }}
     - run: chmod +x ${{ github.action_path }}/test/script2.sh
     - run: chmod +x ${{env.GITHUB_ACTION_PATH}}/script.sh
     - run: ${{ env.GITHUB_ACTION_PATH }}/script.sh
