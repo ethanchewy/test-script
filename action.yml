@@ -5,6 +5,6 @@ runs:
   using: "composite"
   steps: 
     - run: chmod +x ${{env.GITHUB_ACTION_PATH}}/script.sh
-    - run: chmod +x ${{env.GITHUB_ACTION_PATH}}/test/script2.sh
-    - run: ${{env.GITHUB_ACTION_PATH}}/script.sh
-    - run: ${{env.GITHUB_ACTION_PATH}}/test/script2.sh
+    - run: chmod +x ${{ github.action_path }}/test/script2.sh
+    - run: ${{ env.GITHUB_ACTION_PATH }}/script.sh
+    - run: ${{ github.action_path }}/test/script2.sh
