@@ -4,6 +4,6 @@ description: "Run multiple run steps"
 runs:
   using: "composite"
   steps: 
-    - uses: actions/checkout@v2
+    - run: printenv
     - run: ./script.sh
     - run: ./test/script2.sh
