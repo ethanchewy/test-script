@@ -5,10 +5,10 @@ runs:
   using: "composite"
   steps: 
     - run: chmod +x ${{ github.action_path }}/test/script2.sh
-      shell: bash
+      shell: sh
     - run: chmod +x $GITHUB_ACTION_PATH/script.sh
-      shell: bash
+      shell: sh
     - run: ${{ github.action_path }}/test/script2.sh
-      shell: bash
+      shell: sh
     - run: $GITHUB_ACTION_PATH/script.sh
-      shell: bash
+      shell: sh
