@@ -4,11 +4,11 @@ description: "Run multiple run steps"
 runs:
   using: "composite"
   steps: 
-    - run: chmod +x ${{ github.action_path }}/test/script2.sh
+    - run: chmod +x $GITHUB_ACTION_PATH/test/script2.sh
       shell: sh
     - run: chmod +x $GITHUB_ACTION_PATH/script.sh
       shell: sh
-    - run: ${{ github.action_path }}/test/script2.sh
+    - run: $GITHUB_ACTION_PATH/test/script2.sh
       shell: sh
     - run: $GITHUB_ACTION_PATH/script.sh
       shell: sh
